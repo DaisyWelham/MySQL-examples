@@ -1,0 +1,29 @@
+create database LeagueCharacters;
+use LeagueCharacters;
+create table champions (Cname VARCHAR(20),class VARCHAR(20),role set 
+("top","jng","mid","bot","sup"));
+ALTER TABLE champions ADD PRIMARY KEY (Cname);
+INSERT INTO champions(Cname, class, role) VALUES 
+("ChoGath","Tank","top"),
+("Vayne","Marksman","top"),
+("Jax","Tank","top"),
+("Yone","Assassin","mid"),
+("Veigar","Mage","mid"),
+("Amumu","Tank","jng"),
+("Vi","Tank","jng"),
+("Nunu & Willump","Tank","jng"),
+("Diana","Assassin","jng"),
+("Kalista","Marksman","bot"),
+("Miss Fortune","Marksman","bot"),
+("Senna","Marksman","sup"),
+("Morgana","Mage","sup"),
+("Blitzcrank","Tank","sup"),
+("Seraphine","Cleric","sup"),
+("Soraka","Cleric","sup"),
+("Leona","Tank","sup");
+
+SELECT * FROM champions WHERE role = "bot";
+
+SELECT * FROM champions WHERE class = "Cleric";
+
+SELECT * FROM champions WHERE role = "jng" AND class = "Tank";
